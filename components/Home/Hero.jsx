@@ -2,10 +2,11 @@ import Link from "next/link";
 
 export default function Herp() {
   return (
-    <div className="text-center py-16 bg-warm-gray-50 px-4 sm:pt-24 mx-auto">
-      <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-        <span className="">Poco</span>{" "}
-        <span className="text-emerald-600">Verde</span>
+    <div className="text-center bg-warm-gray-50 px-4 pt-12 mx-auto">
+      <h1 className="text-5xl tracking-tight font-extrabold text-gray-900 sm:text-6xl md:text-8xl">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-emerald-600">
+          Poco Verde
+        </span>
       </h1>
       <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
         Let us create your outdoor living area!
