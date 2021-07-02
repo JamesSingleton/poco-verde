@@ -46,7 +46,7 @@ const Index = () => (
             <Image
               className="h-12"
               src="/images/builders/brighton-logo2.png"
-              alt="StaticKit"
+              alt="Brighton Homes Logo"
               height="48"
               width="105"
             />
@@ -55,7 +55,7 @@ const Index = () => (
             <Image
               className="h-12"
               src="/images/builders/Meritage-Homes-logo.svg"
-              alt="Transistor"
+              alt="Meritage Homes Logo"
               height="48"
               width="105"
             />
@@ -64,7 +64,7 @@ const Index = () => (
             <Image
               className="h-12"
               src="/images/builders/David-Weekley-logo.png"
-              alt="Workcation"
+              alt="David Weekley Logo"
               height="48"
               width="105"
             />

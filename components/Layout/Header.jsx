@@ -337,7 +337,6 @@ export default function Example() {
                         className="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&shade=500"
                         alt="Workflow"
-                        layout="fill"
                         height="32"
                         width="32"
                       />
@@ -393,7 +392,7 @@ export default function Example() {
                   <div>
                     <a
                       href="#"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700"
                     >
                       Free Quote
                     </a>
