@@ -110,8 +110,8 @@ const Index = () => (
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="/images/portfolio/pool-18.jpg"
                 alt="Inbox user interface"
-                width="551.6"
-                height="502"
+                width="1024"
+                height="768"
               />
             </div>
           </div>
