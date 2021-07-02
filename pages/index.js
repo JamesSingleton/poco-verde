@@ -23,8 +23,8 @@ const Index = () => (
         <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
           Trusted by popular builders
         </p>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4">
-          <div className="col-span-1 flex justify-center ">
+        <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <Image
               className="h-12"
               src="/images/builders/DR-Horton-logo.svg"
@@ -33,7 +33,7 @@ const Index = () => (
               width="105"
             />
           </div>
-          <div className="col-span-1 flex justify-center">
+          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <Image
               className="h-12"
               src="/images/builders/KB-logo.svg"
@@ -42,7 +42,7 @@ const Index = () => (
               width="105"
             />
           </div>
-          <div className="col-span-1 flex justify-center">
+          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <Image
               className="h-12"
               src="/images/builders/brighton-logo2.png"
@@ -51,7 +51,7 @@ const Index = () => (
               width="105"
             />
           </div>
-          <div className="col-span-1 flex justify-center">
+          <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
             <Image
               className="h-12"
               src="/images/builders/Meritage-Homes-logo.svg"
@@ -60,15 +60,15 @@ const Index = () => (
               width="105"
             />
           </div>
-          {/* <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
+          <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
             <Image
               className="h-12"
-              src="/images/builders/Fulton-Homes-logo.png"
+              src="/images/builders/David-Weekley-logo.png"
               alt="Workcation"
               height="48"
               width="105"
             />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

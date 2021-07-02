@@ -7,14 +7,13 @@ export default function Example() {
         <span className="block text-emerald-700 xl:inline">Verde</span>
       </h1>
       <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-        cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+        Let us create your outdoor living area!
       </p>
       <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
         <div className="rounded-md shadow">
           <a
             href="#"
-            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 md:py-4 md:text-lg md:px-10"
+            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 md:py-4 md:text-lg md:px-10"
           >
             Get started
           </a>
