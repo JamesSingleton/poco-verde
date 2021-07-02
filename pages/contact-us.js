@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Head from "next/head";
 import { MailIcon, MenuIcon, PhoneIcon, XIcon } from "@heroicons/react/outline";
 
 const offices = [
@@ -11,16 +12,17 @@ const offices = [
 
 const ContactUs = () => (
   <>
-    <div className="bg-warm-gray-50">
+    <Head>
+      <title>Contact Us | Poco Verde Pools and Landscape Inc</title>
+    </Head>
+    <div className="bg-gradient-to-t from-warm-gray-50">
       <div className="py-24 lg:py-32">
         <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
             Get in touch
           </h1>
           <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
-            Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus
-            morbi non morbi. In elementum urna ut volutpat. Sagittis et vel et
-            fermentum amet consequat.
+            Want to get in touch? We&apos;d love to hear from you.
           </p>
         </div>
       </div>
@@ -28,10 +30,7 @@ const ContactUs = () => (
 
     {/* Contact section */}
     <section className="relative bg-white" aria-labelledby="contactHeading">
-      <div
-        className="absolute w-full h-1/2 bg-warm-gray-50"
-        aria-hidden="true"
-      />
+      <div className="absolute w-full h-1/2 bg-white" aria-hidden="true" />
       {/* Decorative dot pattern */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <svg
@@ -364,7 +363,7 @@ const ContactUs = () => (
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
+                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
                   >
                     Submit
                   </button>
@@ -383,11 +382,10 @@ const ContactUs = () => (
           id="officesHeading"
           className="text-3xl font-extrabold text-warm-gray-900"
         >
-          Our offices
+          Our office
         </h2>
         <p className="mt-6 text-lg text-warm-gray-500 max-w-3xl">
-          Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id
-          malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.
+          Want to see our work in person? Stop by our office!
         </p>
         <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {offices.map((office) => (

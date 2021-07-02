@@ -18,7 +18,7 @@ const Index = () => (
       />
     </Head>
     <Hero />
-    <div className="bg-warm-gray-50">
+    <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
           Trusted by your favorite home builders

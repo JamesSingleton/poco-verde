@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Herp() {
   return (
-    <div className="text-center bg-warm-gray-50 px-4 pt-12 mx-auto">
+    <div className="text-center bg-white px-4 pt-12 mx-auto">
       <h1 className="text-5xl tracking-tight font-extrabold text-gray-900 sm:text-6xl md:text-8xl">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-emerald-600">
           Poco Verde
