@@ -21,54 +21,54 @@ const Index = () => (
     <div className="bg-warm-gray-50">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-          Trusted by over 5 popular builders
+          Trusted by popular builders
         </p>
-        <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4">
+          <div className="col-span-1 flex justify-center ">
             <Image
               className="h-12"
-              src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-              alt="Tuple"
+              src="/images/builders/DR-Horton-logo.svg"
+              alt="DR Horton Logo"
               height="48"
               width="105"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+          <div className="col-span-1 flex justify-center">
             <Image
               className="h-12"
-              src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-              alt="Mirage"
+              src="/images/builders/KB-logo.svg"
+              alt="KB Homes Logo"
               height="48"
               width="105"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+          <div className="col-span-1 flex justify-center">
             <Image
               className="h-12"
-              src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
+              src="/images/builders/brighton-logo2.png"
               alt="StaticKit"
               height="48"
               width="105"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
+          <div className="col-span-1 flex justify-center">
             <Image
               className="h-12"
-              src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
+              src="/images/builders/Meritage-Homes-logo.svg"
               alt="Transistor"
               height="48"
               width="105"
             />
           </div>
-          <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
+          {/* <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
             <Image
               className="h-12"
-              src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
+              src="/images/builders/Fulton-Homes-logo.png"
               alt="Workcation"
               height="48"
               width="105"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
