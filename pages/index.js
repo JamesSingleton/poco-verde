@@ -45,7 +45,7 @@ const Index = () => (
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <Image
               className="h-12"
-              src="/images/builders/brighton-logo2.png"
+              src="/images/builders/Brighton-Homes-logo.svg"
               alt="Brighton Homes Logo"
               height="48"
               width="105"
@@ -60,10 +60,10 @@ const Index = () => (
               width="105"
             />
           </div>
-          <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1 aspect-h-12">
+          <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
             <Image
               className="h-12"
-              src="/images/builders/David-Weekley-logo.png"
+              src="/images/builders/David-Weekley-logo.svg"
               alt="David Weekley Logo"
               height="48"
               width="105"
