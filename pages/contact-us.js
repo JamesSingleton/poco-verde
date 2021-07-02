@@ -79,7 +79,7 @@ const ContactUs = () => (
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
             {/* Contact information */}
-            <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-teal-500 to-teal-600 sm:px-10 xl:p-12">
+            <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-teal-600 to-emerald-600 sm:px-10 xl:p-12">
               {/* Decorative angle backgrounds */}
               <div
                 className="absolute inset-0 pointer-events-none sm:hidden"
@@ -183,7 +183,7 @@ const ContactUs = () => (
               <h3 className="text-lg font-medium text-white">
                 Contact information
               </h3>
-              <p className="mt-6 text-base text-teal-50 max-w-3xl">
+              <p className="mt-6 text-base text-white max-w-3xl">
                 Nullam risus blandit ac aliquam justo ipsum. Quam mauris
                 volutpat massa dictumst amet. Sapien tortor lacus arcu.
               </p>
@@ -191,9 +191,9 @@ const ContactUs = () => (
                 <dt>
                   <span className="sr-only">Phone number</span>
                 </dt>
-                <dd className="flex text-base text-teal-50">
+                <dd className="flex text-base text-white">
                   <PhoneIcon
-                    className="flex-shrink-0 w-6 h-6 text-teal-200"
+                    className="flex-shrink-0 w-6 h-6 text-white"
                     aria-hidden="true"
                   />
                   <span className="ml-3">+1 (480) 893-3948</span>
@@ -201,9 +201,9 @@ const ContactUs = () => (
                 <dt>
                   <span className="sr-only">Email</span>
                 </dt>
-                <dd className="flex text-base text-teal-50">
+                <dd className="flex text-base text-white">
                   <MailIcon
-                    className="flex-shrink-0 w-6 h-6 text-teal-200"
+                    className="flex-shrink-0 w-6 h-6 text-white"
                     aria-hidden="true"
                   />
                   <span className="ml-3">info@pocoverde.com</span>
