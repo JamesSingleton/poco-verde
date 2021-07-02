@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Herp() {
   return (
-    <div className="text-center py-16 bg-warm-gray-50 px-4 sm:pt-24 mx-auto max-w-7xl">
+    <div className="text-center py-16 bg-warm-gray-50 px-4 sm:pt-24 mx-auto">
       <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
         <span className="">Poco</span>{" "}
         <span className="text-emerald-600">Verde</span>
