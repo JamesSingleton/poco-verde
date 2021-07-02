@@ -14,6 +14,10 @@ const ContactUs = () => (
   <>
     <Head>
       <title>Contact Us | Poco Verde Pools and Landscape Inc</title>
+      <meta
+        name="description"
+        content="Contact us for any general landscape questions or quote information to help meet your landscape design needs in Scottsdale, Phoenix, Mesa, Paradise Valley. Call for a quote at 480-893-3948!"
+      />
     </Head>
     <div className="bg-gradient-to-t from-warm-gray-50">
       <div className="py-24 lg:py-32">
