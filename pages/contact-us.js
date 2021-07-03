@@ -75,7 +75,7 @@ const ContactUs = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-white shadow-xl">
           <h2 id="contactHeading" className="sr-only">
-            Contact us
+            Contact Us
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -185,8 +185,8 @@ const ContactUs = () => (
                 Contact information
               </h3>
               <p className="mt-6 text-base text-white max-w-3xl">
-                Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                volutpat massa dictumst amet. Sapien tortor lacus arcu.
+                Contact us for any general landscape questions or quote
+                information to help meet your landscape design needs.
               </p>
               <dl className="mt-8 space-y-6">
                 <dt>

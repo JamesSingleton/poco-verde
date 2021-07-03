@@ -13,13 +13,12 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 const packages = [
   {
     name: "Builder Packages",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "See what packages we offer for your preferred builder.",
     href: "/packages/builder",
   },
   {
     name: "Store",
-    description: "Speak directly to your customers in a more meaningful way.",
+    description: "Shop our selection of products.",
     href: "/packages/shop",
   },
 ];
@@ -49,25 +48,23 @@ const resources = [
 const portfolio = [
   {
     name: "Artificial Turf & Putting Greens",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "See the turf and putting greens we have put in.",
     href: "/portfolio/turf",
   },
   {
     name: "Barbeques",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "View our gallery of built in barbeques.",
     href: "/portfolio/bbq",
   },
   {
     name: "Pools",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "View our pools to get some ideas for your home!",
     href: "/portfolio/pools",
   },
   {
     name: "Water Features",
-    description: "Water features",
+    description:
+      "Gallery of our water features to get some ideas for your home!",
     href: "/portfolio/water-features",
   },
 ];
