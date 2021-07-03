@@ -4,7 +4,7 @@ const SmallLogo = ({ classes }) => (
       id="SvgjsG1605"
       featurekey="symbolFeature-0"
       transform="matrix(1.087414958422197,0,0,1.087414958422197,-5.712935653183498,-14.51812463120275)"
-      fill="#04a118"
+      fill="#059669"
     >
       <path
         xmlns="http://www.w3.org/2000/svg"
