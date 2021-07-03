@@ -1,5 +1,5 @@
 const Logo = ({ classes }) => (
-  <svg className={classes} width="500" height="100" viewBox="0 0 338 72">
+  <svg className={classes} viewBox="0 0 338 72">
     <defs id="SvgjsDefs1604">
       <linearGradient id="SvgjsLinearGradient1611">
         <stop id="SvgjsStop1612" stopColor="#006838" offset="0"></stop>
