@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -9,6 +8,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import SmallLogo from "./SmallLogo.jsx";
 
 const packages = [
   {
@@ -82,15 +82,9 @@ export default function Header() {
             <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link href="/">
-                  <a>
-                    <span className="sr-only">Workflow</span>
-                    <Image
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&shade=500"
-                      alt=""
-                      height="32"
-                      width="32"
-                    />
+                  <a className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                    <span className="sr-only">Poco Verde Logo</span>
+                    <SmallLogo classes="h-8 w-auto sm:h-10" />
                   </a>
                 </Link>
               </div>
@@ -161,7 +155,7 @@ export default function Header() {
                 </Popover>
 
                 <Link href="/finance">
-                  <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <a className="text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                     Finance
                   </a>
                 </Link>
@@ -329,13 +323,7 @@ export default function Header() {
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <Image
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&shade=500"
-                        alt="Workflow"
-                        height="32"
-                        width="32"
-                      />
+                      <SmallLogo classes="h-8 w-auto" />
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
