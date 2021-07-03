@@ -19,7 +19,7 @@ const ContactUs = () => (
         content="Contact us for any general landscape questions or quote information to help meet your landscape design needs in Scottsdale, Phoenix, Mesa, Paradise Valley. Call for a quote at 480-893-3948!"
       />
     </Head>
-    <div className="bg-gradient-to-t from-warm-gray-50">
+    <div className="bg-gradient-to-b from-white to-warm-gray-50">
       <div className="py-24 lg:py-32">
         <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
@@ -34,7 +34,10 @@ const ContactUs = () => (
 
     {/* Contact section */}
     <section className="relative bg-white" aria-labelledby="contactHeading">
-      <div className="absolute w-full h-1/2 bg-white" aria-hidden="true" />
+      <div
+        className="absolute w-full h-1/2 bg-warm-gray-50"
+        aria-hidden="true"
+      />
       {/* Decorative dot pattern */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <svg
