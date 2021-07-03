@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { PhoneIcon, MailIcon } from "@heroicons/react/outline";
+import { COMPANY_NAME_LONG } from "@/lib/constants";
 
 const Quote = () => (
   <>
     <Head>
-      <title>Free Quote | Poco Verde Pools and Landscape Inc</title>
+      <title>{`Free Quote | ${COMPANY_NAME_LONG}`}</title>
       <meta
         name="description"
         content="Get a free quote for all your landscaping needs!"

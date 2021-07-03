@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { COMPANY_NAME } from "@/lib/constants";
 
 export default function Herp() {
   return (
     <div className="text-center bg-white px-4 pb-4 pt-12 mx-auto sm:pb-0">
       <h1 className="text-5xl tracking-tight font-extrabold text-gray-900 sm:text-6xl md:text-8xl">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-emerald-600">
-          Poco Verde
+          {COMPANY_NAME}
         </span>
       </h1>
       <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">

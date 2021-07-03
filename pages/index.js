@@ -2,20 +2,17 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
-import { getLayout } from "../components/Layout/SiteLayout";
-import Hero from "../components/Home/Hero";
+import { getLayout } from "@/components/Layout/SiteLayout";
+import Hero from "@/components/Home/Hero";
+import { COMPANY_NAME_LONG, DEFAULT_DESCRIPTION } from "@/lib/constants";
 
 const Index = () => (
   <>
     <Head>
       <title>
-        Phoenix Arizona Landscaping Contractor | Poco Verde Pools and Landscape
-        Inc
+        {`Phoenix Arizona Landscaping Contractor | ${COMPANY_NAME_LONG}`}
       </title>
-      <meta
-        name="description"
-        content="Professional landscape and pool designers in Phoenix that can create your perfect landscape environment, Poco Verde Landscape has been in business for over 30 years, call for a quote at 480-893-3948!"
-      />
+      <meta name="description" content={DEFAULT_DESCRIPTION} />
     </Head>
     <Hero />
     <div className="bg-white">

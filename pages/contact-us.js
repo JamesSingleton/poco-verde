@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Head from "next/head";
 import { MailIcon, MenuIcon, PhoneIcon, XIcon } from "@heroicons/react/outline";
+import { COMPANY_NAME_LONG, CONTACT_US_DESCRIPTION } from "@/lib/constants";
 
 const offices = [
   {
@@ -13,11 +14,8 @@ const offices = [
 const ContactUs = () => (
   <>
     <Head>
-      <title>Contact Us | Poco Verde Pools and Landscape Inc</title>
-      <meta
-        name="description"
-        content="Contact us for any general landscape questions or quote information to help meet your landscape design needs in Scottsdale, Phoenix, Mesa, Paradise Valley. Call for a quote at 480-893-3948!"
-      />
+      <title>{`Contact Us | ${COMPANY_NAME_LONG}`}</title>
+      <meta name="description" content={CONTACT_US_DESCRIPTION} />
     </Head>
     <div className="bg-gradient-to-b from-white to-warm-gray-50">
       <div className="py-24 lg:py-32">
