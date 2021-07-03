@@ -71,7 +71,7 @@ const Quote = () => (
             Contact us
           </h2>
 
-          <div className="lg:absolute lg:inset-0">
+          <div className="hidden lg:block lg:absolute lg:inset-0">
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
               <Image
                 className="h-56 w-full object-cover lg:absolute lg:h-full"
@@ -94,9 +94,9 @@ const Quote = () => (
                 <form
                   action="#"
                   method="POST"
-                  className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                  className="mt-9 grid grid-cols-6 gap-6"
                 >
-                  <div>
+                  <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="first-name"
                       className="block text-sm font-medium text-gray-700"
@@ -113,7 +113,7 @@ const Quote = () => (
                       />
                     </div>
                   </div>
-                  <div>
+                  <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="last-name"
                       className="block text-sm font-medium text-gray-700"
@@ -130,7 +130,7 @@ const Quote = () => (
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  <div className="col-span-6">
                     <label
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700"
@@ -147,38 +147,13 @@ const Quote = () => (
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  <div className="col-span-6">
                     <label
-                      htmlFor="company"
+                      htmlFor="phone"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Company
+                      Phone
                     </label>
-                    <div className="mt-1">
-                      <input
-                        type="text"
-                        name="company"
-                        id="company"
-                        autoComplete="organization"
-                        className="block w-full shadow-sm sm:text-sm focus:ring-emerald-500 focus:border-emerald-500 border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <div className="flex justify-between">
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Phone
-                      </label>
-                      <span
-                        id="phone-description"
-                        className="text-sm text-gray-500"
-                      >
-                        Optional
-                      </span>
-                    </div>
                     <div className="mt-1">
                       <input
                         type="text"
@@ -190,7 +165,69 @@ const Quote = () => (
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  <div className="col-span-6">
+                    <label
+                      htmlFor="street-address"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Street address
+                    </label>
+                    <input
+                      type="text"
+                      name="street-address"
+                      id="street-address"
+                      autoComplete="street-address"
+                      className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+
+                  <div className="col-span-6 sm:col-span-6 lg:col-span-2">
+                    <label
+                      htmlFor="city"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      City
+                    </label>
+                    <input
+                      type="text"
+                      name="city"
+                      id="city"
+                      className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+
+                  <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                    <label
+                      htmlFor="state"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      State / Province
+                    </label>
+                    <input
+                      type="text"
+                      name="state"
+                      id="state"
+                      className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+
+                  <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                    <label
+                      htmlFor="postal-code"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      ZIP / Postal
+                    </label>
+                    <input
+                      type="text"
+                      name="postal-code"
+                      id="postal-code"
+                      autoComplete="postal-code"
+                      className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+
+                  <div className="col-span-6">
                     <div className="flex justify-between">
                       <label
                         htmlFor="how-can-we-help"
@@ -216,7 +253,7 @@ const Quote = () => (
                       />
                     </div>
                   </div>
-                  <fieldset className="sm:col-span-2">
+                  <fieldset className="col-span-6">
                     <legend className="block text-sm font-medium text-gray-700">
                       Expected budget
                     </legend>
@@ -279,7 +316,7 @@ const Quote = () => (
                       </div>
                     </div>
                   </fieldset>
-                  <div className="sm:col-span-2">
+                  <div className="col-span-6">
                     <label
                       htmlFor="how-did-you-hear-about-us"
                       className="block text-sm font-medium text-gray-700"
@@ -295,7 +332,7 @@ const Quote = () => (
                       />
                     </div>
                   </div>
-                  <div className="text-right sm:col-span-2">
+                  <div className="text-right col-span-6">
                     <button
                       type="submit"
                       className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
