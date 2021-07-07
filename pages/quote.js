@@ -76,7 +76,7 @@ const Quote = () => (
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
               <Image
                 className="h-56 w-full object-cover lg:absolute lg:h-full"
-                src="/images/portfolio/front-yard-desert.jpg"
+                src="https://res.cloudinary.com/dndhwi9i4/image/upload/v1625628477/Poco%20Verde/Portfolio/Front%20Yard%20Desert/front-yard-desert_vr614a.jpg"
                 alt="Front Yard Desert"
                 layout="fill"
               />

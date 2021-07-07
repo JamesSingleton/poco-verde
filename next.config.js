@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["tailwindui.com", "images.unsplash.com"],
+    domains: ["res.cloudinary.com", "images.unsplash.com"],
   },
   i18n: {
     // These are all the locales you want to support in
