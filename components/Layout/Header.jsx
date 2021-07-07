@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 import { Popover, Transition } from "@headlessui/react";
 import {
   MenuIcon,
@@ -23,8 +24,16 @@ const packages = [
   },
 ];
 const callsToAction = [
-  { name: "View More", href: "/portfolio", icon: ViewGridIcon },
-  { name: "Contact Sales", href: "/contact-us", icon: PhoneIcon },
+  {
+    i18nKey: "header.portfolio.view.all.text",
+    href: "/portfolio",
+    icon: ViewGridIcon,
+  },
+  {
+    i18nKey: "header.portfolio.contact.sales.text",
+    href: "/contact-us",
+    icon: PhoneIcon,
+  },
 ];
 const resources = [
   {
@@ -74,6 +83,8 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const { formatMessage } = useIntl();
+  const f = (id) => formatMessage({ id });
   return (
     <Popover as="header" className="relative bg-white">
       {({ open }) => (
@@ -104,7 +115,7 @@ export default function Header() {
                           "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                         )}
                       >
-                        <span>Packages</span>
+                        <span>{f("header.packages.button.text")}</span>
                         <ChevronDownIcon
                           className={classNames(
                             open ? "text-gray-600" : "text-gray-400",
@@ -210,14 +221,16 @@ export default function Header() {
                             </div>
                             <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                               {callsToAction.map((item) => (
-                                <div key={item.name} className="flow-root">
+                                <div key={item.i18nKey} className="flow-root">
                                   <Link href={item.href}>
                                     <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
                                       <item.icon
                                         className="flex-shrink-0 h-6 w-6 text-gray-400"
                                         aria-hidden="true"
                                       />
-                                      <span className="ml-3">{item.name}</span>
+                                      <span className="ml-3">
+                                        {f(item.i18nKey)}
+                                      </span>
                                     </a>
                                   </Link>
                                 </div>
@@ -290,7 +303,7 @@ export default function Header() {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/quote">
                   <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700">
-                    Free Quote
+                    {f("header.free.quote.button.text")}
                   </a>
                 </Link>
               </div>

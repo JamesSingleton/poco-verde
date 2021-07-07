@@ -8,14 +8,18 @@ import { COMPANY_NAME_LONG } from "@/lib/constants";
 
 const PortfolioLayout = ({ children }) => {
   const router = useRouter();
-  const { locale, locales, defaultLocale, pathname, asPath } = router;
+  const { locale, locales, defaultLocale, pathname, asPath, query } = router;
+  console.log(query.slug);
   const { formatMessage } = useIntl();
   const f = (id) => formatMessage({ id });
+
+  const titleText = `${query.slug.replace(/-/g, ".")}.title.text`;
+  const breadcrumbText = `${query.slug.replace(/-/g, ".")}.breadcrumb.text`;
 
   return (
     <>
       <Head>
-        <title>{`${f("title")} | ${COMPANY_NAME_LONG}`}</title>
+        <title>{`${f(titleText)} | ${COMPANY_NAME_LONG}`}</title>
         <meta
           name="description"
           content={`Poco Verde Landscape has many custom landscape designs to offer - view our portfolio page for ${f(
@@ -70,7 +74,7 @@ const PortfolioLayout = ({ children }) => {
                       />
                       <Link href={asPath}>
                         <a className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">
-                          {f("breadcrumb")}
+                          {f(breadcrumbText)}
                         </a>
                       </Link>
                     </div>
@@ -81,7 +85,7 @@ const PortfolioLayout = ({ children }) => {
             <div className="mt-2 md:flex md:items-center md:justify-between">
               <div className="flex-1 min-w-0">
                 <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-                  {f("title")}
+                  {f(titleText)}
                 </h1>
               </div>
             </div>

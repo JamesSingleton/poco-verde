@@ -15,7 +15,7 @@ const SiteLayout = ({ children }) => {
     <IntlProvider
       locale={locale}
       defaultLocale={defaultLocale}
-      messages={messages}
+      messages={localeCopy}
     >
       <div className="bg-white antialiased min-h-screen">
         <Header />
