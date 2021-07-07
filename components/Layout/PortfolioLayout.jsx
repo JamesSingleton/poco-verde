@@ -9,7 +9,7 @@ import { COMPANY_NAME_LONG } from "@/lib/constants";
 const PortfolioLayout = ({ children }) => {
   const router = useRouter();
   const { locale, locales, defaultLocale, pathname, asPath, query } = router;
-  console.log(query.slug);
+
   const { formatMessage } = useIntl();
   const f = (id) => formatMessage({ id });
 
@@ -23,7 +23,7 @@ const PortfolioLayout = ({ children }) => {
         <meta
           name="description"
           content={`Poco Verde Landscape has many custom landscape designs to offer - view our portfolio page for ${f(
-            "title"
+            titleText
           ).toLowerCase()} to get some ideas for your home. Call for a quote at 480-893-3948!`}
         />
       </Head>
