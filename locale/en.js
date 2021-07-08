@@ -5,6 +5,12 @@ export const en = {
   "header.packages.button.text": "Packages",
   "header.portfolio.view.all.text": "View All",
   "header.portfolio.contact.sales.text": "Contact Sales",
+  "contact.info.title.text": "Contact information",
+  "contact.info.description.text":
+    "Let's get this conversation started. Tell us a little bit about yourself and we'll get in touch as soon as we can.",
+  "contact.title.text": "Get in touch",
+  "contact.title.description.text":
+    "Want to get in touch? We'd love to hear from you.",
   "turf.title.text": "Artificial Turf & Putting Greens",
   "turf.breadcrumb.text": "Turf",
   "bbq.title.text": "Barbeques",
