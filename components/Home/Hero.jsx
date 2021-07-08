@@ -5,7 +5,7 @@ import Logo from "@/components/Layout/Logo";
 export default function Herp() {
   return (
     <div className="text-center bg-white px-4 pb-4 pt-12 mx-auto sm:pb-0">
-      <div className="h-28 w-auto sm:w-2/4 mx-auto">
+      <div className="h-auto w-auto sm:w-2/4 mx-auto">
         <Logo classes="mx-auto" />
       </div>
       <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
