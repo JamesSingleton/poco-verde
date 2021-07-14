@@ -2,7 +2,10 @@ import { Fragment } from "react";
 import Head from "next/head";
 import { useIntl } from "react-intl";
 import { MailIcon, MenuIcon, PhoneIcon, XIcon } from "@heroicons/react/outline";
+import { ExclamationCircleIcon } from "@heroicons/react/solid";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import classNames from "classnames";
+import * as Yup from "yup";
 import { COMPANY_NAME_LONG, CONTACT_US_DESCRIPTION } from "@/lib/constants";
 
 const offices = [
@@ -13,9 +16,25 @@ const offices = [
   },
 ];
 
+const ContactUsSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  lastName: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  email: Yup.string().email("Invalid email").required("Required"),
+  phone: Yup.string(),
+  subject: Yup.string().min(5).max(50).required("Required"),
+  message: Yup.string().min(5).max(500).required("Required"),
+});
+
 const ContactUs = () => {
   const { formatMessage } = useIntl();
   const f = (id) => formatMessage({ id });
+
   return (
     <>
       <Head>
@@ -254,142 +273,288 @@ const ContactUs = () => {
                     subject: "",
                     message: "",
                   }}
-                  onSubmit={async (values) => {
-                    await new Promise((r) => setTimeout(r, 500));
-                    alert(JSON.stringify(values, null, 2));
+                  validationSchema={ContactUsSchema}
+                  onSubmit={(values) => {
+                    fetch("/api/contact", {
+                      method: "POST",
+                      headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(values),
+                    }).then((res) => {
+                      console.log("Response Received");
+                      if (res.status === 200) {
+                        console.log("Response Succeeded!");
+                      }
+                    });
                   }}
                 >
-                  <Form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                    <div>
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-medium text-warm-gray-900"
-                      >
-                        First name
-                      </label>
-                      <div className="mt-1">
-                        <Field
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
-                          name="firstName"
-                          id="firstName"
-                          type="text"
-                          autoComplete="given-name"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-medium text-warm-gray-900"
-                      >
-                        Last name
-                      </label>
-                      <div className="mt-1">
-                        <Field
-                          type="text"
-                          name="lastName"
-                          id="lastName"
-                          autoComplete="family-name"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-warm-gray-900"
-                      >
-                        Email
-                      </label>
-                      <div className="mt-1">
-                        <Field
-                          type="email"
-                          id="email"
-                          name="email"
-                          autoComplete="email"
-                          placeholder="you@example.com"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between">
+                  {({ errors, touched }) => (
+                    <Form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                      <div>
                         <label
-                          htmlFor="phone"
+                          htmlFor="firstName"
                           className="block text-sm font-medium text-warm-gray-900"
                         >
-                          Phone
+                          First name
                         </label>
-                        <span
-                          id="phone-optional"
-                          className="text-sm text-warm-gray-500"
-                        >
-                          Optional
-                        </span>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <Field
+                            className={classNames(
+                              errors.firstName
+                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
+                              "py-3 px-4 block w-full pr-10 rounded-md"
+                            )}
+                            name="firstName"
+                            id="firstName"
+                            type="text"
+                            autoComplete="given-name"
+                            aria-invalid={errors.firstName}
+                            aria-describedby="firstName-error"
+                          />
+                          {errors.firstName && touched.firstName ? (
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                              <ExclamationCircleIcon
+                                className="h-5 w-5 text-red-500"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          ) : null}
+                        </div>
+                        {errors.firstName && touched.firstName ? (
+                          <p
+                            className="mt-2 text-sm text-red-600"
+                            id="firstName-error"
+                          >
+                            {errors.firstName}
+                          </p>
+                        ) : null}
                       </div>
-                      <div className="mt-1">
-                        <Field
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          autoComplete="tel"
-                          placeholder="(555) 987-6543"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
-                          aria-describedby="phone-optional"
-                        />
-                      </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="subject"
-                        className="block text-sm font-medium text-warm-gray-900"
-                      >
-                        Subject
-                      </label>
-                      <div className="mt-1">
-                        <Field
-                          type="text"
-                          name="subject"
-                          id="subject"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <div className="flex justify-between">
+                      <div>
                         <label
-                          htmlFor="message"
+                          htmlFor="lastName"
                           className="block text-sm font-medium text-warm-gray-900"
                         >
-                          Message
+                          Last name
                         </label>
-                        <span
-                          id="message-max"
-                          className="text-sm text-warm-gray-500"
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <Field
+                            type="text"
+                            name="lastName"
+                            id="lastName"
+                            autoComplete="family-name"
+                            className={classNames(
+                              errors.lastName
+                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
+                              "py-3 px-4 block w-full pr-10 rounded-md"
+                            )}
+                            aria-invalid={errors.lastName}
+                            aria-describedby="lastName-error"
+                          />
+                          {errors.lastName && touched.lastName ? (
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                              <ExclamationCircleIcon
+                                className="h-5 w-5 text-red-500"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          ) : null}
+                        </div>
+                        {errors.lastName && touched.lastName ? (
+                          <p
+                            className="mt-2 text-sm text-red-600"
+                            id="lastName-error"
+                          >
+                            {errors.lastName}
+                          </p>
+                        ) : null}
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-warm-gray-900"
                         >
-                          Max. 500 characters
-                        </span>
+                          Email
+                        </label>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <Field
+                            type="email"
+                            id="email"
+                            name="email"
+                            autoComplete="email"
+                            placeholder="you@example.com"
+                            className={classNames(
+                              errors.email
+                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
+                              "py-3 px-4 block w-full pr-10 rounded-md"
+                            )}
+                            aria-invalid={errors.email}
+                            aria-describedby="email-error"
+                          />
+                          {errors.email && touched.email ? (
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                              <ExclamationCircleIcon
+                                className="h-5 w-5 text-red-500"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          ) : null}
+                        </div>
+                        {errors.email && touched.email ? (
+                          <p
+                            className="mt-2 text-sm text-red-600"
+                            id="email-error"
+                          >
+                            {errors.email}
+                          </p>
+                        ) : null}
                       </div>
-                      <div className="mt-1">
-                        <Field
-                          as="textarea"
-                          id="message"
-                          name="message"
-                          rows={4}
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md"
-                          aria-describedby="message-max"
-                        />
+                      <div>
+                        <div className="flex justify-between">
+                          <label
+                            htmlFor="phone"
+                            className="block text-sm font-medium text-warm-gray-900"
+                          >
+                            Phone
+                          </label>
+                          <span
+                            id="phone-optional"
+                            className="text-sm text-warm-gray-500"
+                          >
+                            Optional
+                          </span>
+                        </div>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <Field
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            autoComplete="tel"
+                            placeholder="(555) 987-6543"
+                            className={classNames(
+                              errors.phone
+                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
+                              "py-3 px-4 block w-full pr-10 rounded-md"
+                            )}
+                            aria-describedby="phone-optional"
+                          />
+                          {errors.phone && touched.phone ? (
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                              <ExclamationCircleIcon
+                                className="h-5 w-5 text-red-500"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          ) : null}
+                        </div>
+                        {errors.phone && touched.phone ? (
+                          <p
+                            className="mt-2 text-sm text-red-600"
+                            id="phone-error"
+                          >
+                            {errors.phone}
+                          </p>
+                        ) : null}
                       </div>
-                    </div>
-                    <div className="sm:col-span-2 sm:flex sm:justify-end">
-                      <button
-                        type="submit"
-                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </Form>
+                      <div className="sm:col-span-2">
+                        <label
+                          htmlFor="subject"
+                          className="block text-sm font-medium text-warm-gray-900"
+                        >
+                          Subject
+                        </label>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <Field
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            className={classNames(
+                              errors.subject
+                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
+                              "py-3 px-4 block w-full pr-10 rounded-md"
+                            )}
+                          />
+                          {errors.subject && touched.subject ? (
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                              <ExclamationCircleIcon
+                                className="h-5 w-5 text-red-500"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          ) : null}
+                        </div>
+                        {errors.subject && touched.subject ? (
+                          <p
+                            className="mt-2 text-sm text-red-600"
+                            id="subject-error"
+                          >
+                            {errors.subject}
+                          </p>
+                        ) : null}
+                      </div>
+                      <div className="sm:col-span-2">
+                        <div className="flex justify-between">
+                          <label
+                            htmlFor="message"
+                            className="block text-sm font-medium text-warm-gray-900"
+                          >
+                            Message
+                          </label>
+                          <span
+                            id="message-max"
+                            className="text-sm text-warm-gray-500"
+                          >
+                            Max. 500 characters
+                          </span>
+                        </div>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <Field
+                            as="textarea"
+                            id="message"
+                            name="message"
+                            rows={4}
+                            className={classNames(
+                              errors.message
+                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
+                              "py-3 px-4 block w-full pr-10 rounded-md"
+                            )}
+                            aria-describedby="message-max"
+                          />
+                          {errors.message && touched.message ? (
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                              <ExclamationCircleIcon
+                                className="h-5 w-5 text-red-500"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          ) : null}
+                        </div>
+                        {errors.message && touched.message ? (
+                          <p
+                            className="mt-2 text-sm text-red-600"
+                            id="message-error"
+                          >
+                            {errors.message}
+                          </p>
+                        ) : null}
+                      </div>
+                      <div className="sm:col-span-2 sm:flex sm:justify-end">
+                        <button
+                          type="submit"
+                          className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </Form>
+                  )}
                 </Formik>
               </div>
             </div>

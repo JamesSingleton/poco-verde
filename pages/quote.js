@@ -25,7 +25,7 @@ const Quote = () => (
       </div>
     </div>
     {/* Contact section */}
-    <section className="relative bg-white" aria-labelledby="contactHeading">
+    <section className="relative bg-white" aria-labelledby="quoteHeading">
       <div
         className="absolute w-full h-1/2 bg-warm-gray-50"
         aria-hidden="true"
@@ -68,8 +68,8 @@ const Quote = () => (
       </div>
       <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <div className="relative bg-white shadow-xl">
-          <h2 id="contactHeading" className="sr-only">
-            Contact us
+          <h2 id="quoteHeading" className="sr-only">
+            Free Quote
           </h2>
 
           <div className="hidden lg:block lg:absolute lg:inset-0">

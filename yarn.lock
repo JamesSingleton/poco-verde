@@ -348,6 +348,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sendgrid/client@npm:^7.4.3":
+  version: 7.4.3
+  resolution: "@sendgrid/client@npm:7.4.3"
+  dependencies:
+    "@sendgrid/helpers": ^7.4.3
+    axios: ^0.21.1
+  checksum: 657418b9d34f5dfe9e60c2972a9354d73b0457578961e115e1138bcaff5491bc357242e794be4cc55b7f76d3d779449f02e10d76ef957b4995fd4540054232e2
+  languageName: node
+  linkType: hard
+
+"@sendgrid/helpers@npm:^7.4.3":
+  version: 7.4.3
+  resolution: "@sendgrid/helpers@npm:7.4.3"
+  dependencies:
+    deepmerge: ^4.2.2
+  checksum: 1528ff0a19c60e3a0219c28c693a8746b9090387a2971dd9c0a6f78b451b563ea4de6f5d3a53978278146f02db9d4064bb1ccb944a48ec811f280d445f8ca70e
+  languageName: node
+  linkType: hard
+
+"@sendgrid/mail@npm:^7.4.5":
+  version: 7.4.5
+  resolution: "@sendgrid/mail@npm:7.4.5"
+  dependencies:
+    "@sendgrid/client": ^7.4.3
+    "@sendgrid/helpers": ^7.4.3
+  checksum: 8536db1c1d5b450091dfb3593177b99580d4d8db973121088fbdb833c72274295ff12570a6ffcf6d28df736bb20df3973bd8d26dda8b51009eef7117eda452ea
+  languageName: node
+  linkType: hard
+
 "@tailwindcss/aspect-ratio@npm:^0.2.1":
   version: 0.2.1
   resolution: "@tailwindcss/aspect-ratio@npm:0.2.1"
@@ -830,6 +859,15 @@ __metadata:
   version: 4.2.3
   resolution: "axe-core@npm:4.2.3"
   checksum: 678a9fac7ad26f7ada1fb9b7241a56d8cc20bea7cfc5b238c8861d7e8ebaeec28ea811591d843f1c292e9d0b6fb62fb86216445907b9795744b29a8e07d0383c
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.21.1":
+  version: 0.21.1
+  resolution: "axios@npm:0.21.1"
+  dependencies:
+    follow-redirects: ^1.10.0
+  checksum: 864fb7b5d077d236737f10adca53bf451a93f35a15271f56fba8da07265a02d26b7d881b935a6697dc6adb0549ea3e56d2eecb403edaa3bb78f6479901c10f69
   languageName: node
   linkType: hard
 
@@ -1534,6 +1572,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deepmerge@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "deepmerge@npm:4.2.2"
+  checksum: 85abf8e0045ee280996e7d2396979c877ef0741e413b716e42441110e0a83ac08098b2a49cea035510060bf667c0eae3189b2a52349f5fa4b000c211041637b1
+  languageName: node
+  linkType: hard
+
 "define-properties@npm:^1.1.3":
   version: 1.1.3
   resolution: "define-properties@npm:1.1.3"
@@ -2211,6 +2256,16 @@ __metadata:
   version: 3.1.1
   resolution: "flatted@npm:3.1.1"
   checksum: 1065cd78294ea651b8c1b96c298a3e70893a23da655e2288e40c06d5d9b1ebce4bd977e604678e01065a92580f3de5078d60d9ee4cdcede9a9989859d7eb5057
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.10.0":
+  version: 1.14.1
+  resolution: "follow-redirects@npm:1.14.1"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 761a18699688b19d66b3e9199ecaf9cd39ede953f3529299c7fca4190b27b855c17c491170977844d5db5e169ffc35ebae999bb0833e9c9c61988d19c20ae7ab
   languageName: node
   linkType: hard
 
@@ -4041,6 +4096,7 @@ __metadata:
   dependencies:
     "@headlessui/react": ^1.3.0
     "@heroicons/react": ^1.0.1
+    "@sendgrid/mail": ^7.4.5
     "@tailwindcss/aspect-ratio": ^0.2.1
     "@tailwindcss/forms": ^0.3.3
     autoprefixer: ^10.2.6

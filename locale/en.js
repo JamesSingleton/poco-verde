@@ -1,6 +1,10 @@
 export const en = {
+  "home.hero.slogan.text": "Let us create your outdoor living area!",
   "contact.us.button.text": "Contact Us",
   "portfolio.text": "Portfolio",
+  "builders.title.text": "Trusted by your favorite home builders",
+  "notice.description.text":
+    "You just received a 20-Day Preliminary Lien Notice? What you should know!",
   "header.free.quote.button.text": "Free Quote",
   "header.packages.button.text": "Packages",
   "header.portfolio.view.all.text": "View All",
