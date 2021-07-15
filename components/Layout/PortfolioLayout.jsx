@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useIntl } from "react-intl";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
-import { getLayout as getSiteLayout } from "./SiteLayout";
-import { COMPANY_NAME_LONG } from "@/lib/constants";
+import Link from 'next/link';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useIntl } from 'react-intl';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+import { getLayout as getSiteLayout } from './SiteLayout';
+import { COMPANY_NAME_LONG } from '@/lib/constants';
 
 const PortfolioLayout = ({ children }) => {
   const router = useRouter();
@@ -13,8 +13,8 @@ const PortfolioLayout = ({ children }) => {
   const { formatMessage } = useIntl();
   const f = (id) => formatMessage({ id });
 
-  const titleText = `${query.slug.replace(/-/g, ".")}.title.text`;
-  const breadcrumbText = `${query.slug.replace(/-/g, ".")}.breadcrumb.text`;
+  const titleText = `${query.slug.replace(/-/g, '.')}.title.text`;
+  const breadcrumbText = `${query.slug.replace(/-/g, '.')}.breadcrumb.text`;
 
   return (
     <>

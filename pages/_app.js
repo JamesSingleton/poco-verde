@@ -1,7 +1,7 @@
-import React from "react";
-import App from "next/app";
-import SiteLayout from "../components/Layout/SiteLayout";
-import "tailwindcss/tailwind.css";
+import React from 'react';
+import App from 'next/app';
+import SiteLayout from '../components/Layout/SiteLayout';
+import 'tailwindcss/tailwind.css';
 
 class MyApp extends App {
   render() {

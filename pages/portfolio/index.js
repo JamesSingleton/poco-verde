@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import Head from "next/head";
-import files from "@/data/portfolio.json";
-import { COMPANY_NAME_LONG, PORTFOLIO_DESCRIPTION } from "@/lib/constants";
+import Image from 'next/image';
+import Link from 'next/link';
+import Head from 'next/head';
+import files from '@/data/portfolio.json';
+import { COMPANY_NAME_LONG, PORTFOLIO_DESCRIPTION } from '@/lib/constants';
 
 const Portfolio = () => (
   <>

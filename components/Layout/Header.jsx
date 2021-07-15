@@ -1,85 +1,85 @@
-import { Fragment } from "react";
-import Link from "next/link";
-import { useIntl } from "react-intl";
-import { Popover, Transition } from "@headlessui/react";
+import { Fragment } from 'react';
+import Link from 'next/link';
+import { useIntl } from 'react-intl';
+import { Popover, Transition } from '@headlessui/react';
 import {
   MenuIcon,
   PhoneIcon,
   ViewGridIcon,
   XIcon,
-} from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-import SmallLogo from "./SmallLogo.jsx";
+} from '@heroicons/react/outline';
+import { ChevronDownIcon } from '@heroicons/react/solid';
+import SmallLogo from './SmallLogo.jsx';
 
 const packages = [
   {
-    name: "Builder Packages",
-    description: "See what packages we offer for your preferred builder.",
-    href: "/packages/builder",
+    name: 'Builder Packages',
+    description: 'See what packages we offer for your preferred builder.',
+    href: '/packages/builder',
   },
   {
-    name: "Store",
-    description: "Shop our selection of products.",
-    href: "/packages/shop",
+    name: 'Store',
+    description: 'Shop our selection of products.',
+    href: '/packages/shop',
   },
 ];
 const callsToAction = [
   {
-    i18nKey: "header.portfolio.view.all.text",
-    href: "/portfolio",
+    i18nKey: 'header.portfolio.view.all.text',
+    href: '/portfolio',
     icon: ViewGridIcon,
   },
   {
-    i18nKey: "header.portfolio.contact.sales.text",
-    href: "/contact-us",
+    i18nKey: 'header.portfolio.contact.sales.text',
+    href: '/contact-us',
     icon: PhoneIcon,
   },
 ];
 const resources = [
   {
-    name: "Contact Us",
+    name: 'Contact Us',
     description:
-      "Reach out to us to get started building your dream landscape.",
-    href: "/contact-us",
+      'Reach out to us to get started building your dream landscape.',
+    href: '/contact-us',
   },
   {
-    name: "20 Day Notice",
+    name: '20 Day Notice',
     description:
-      "You just received a 20-Day Preliminary Lien Notice? What you should know!",
-    href: "/notice",
+      'You just received a 20-Day Preliminary Lien Notice? What you should know!',
+    href: '/notice',
   },
   {
-    name: "Warranty",
-    description: "Warranty work order.",
-    href: "/warranty",
+    name: 'Warranty',
+    description: 'Warranty work order.',
+    href: '/warranty',
   },
 ];
 const portfolio = [
   {
-    name: "Artificial Turf & Putting Greens",
-    description: "See the turf and putting greens we have put in.",
-    href: "/portfolio/turf",
+    name: 'Artificial Turf & Putting Greens',
+    description: 'See the turf and putting greens we have put in.',
+    href: '/portfolio/turf',
   },
   {
-    name: "Barbeques",
-    description: "View our gallery of built in barbeques.",
-    href: "/portfolio/bbq",
+    name: 'Barbeques',
+    description: 'View our gallery of built in barbeques.',
+    href: '/portfolio/bbq',
   },
   {
-    name: "Pools",
-    description: "View our pools to get some ideas for your home!",
-    href: "/portfolio/pools",
+    name: 'Pools',
+    description: 'View our pools to get some ideas for your home!',
+    href: '/portfolio/pools',
   },
   {
-    name: "Water Features",
+    name: 'Water Features',
     description:
-      "Gallery of our water features to get some ideas for your home!",
-    href: "/portfolio/water-features",
+      'Gallery of our water features to get some ideas for your home!',
+    href: '/portfolio/water-features',
   },
 ];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Header() {
@@ -111,15 +111,15 @@ export default function Header() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                          open ? 'text-gray-900' : 'text-gray-500',
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500'
                         )}
                       >
-                        <span>{f("header.packages.button.text")}</span>
+                        <span>{f('header.packages.button.text')}</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
-                            "ml-2 h-5 w-5 group-hover:text-gray-500"
+                            open ? 'text-gray-600' : 'text-gray-400',
+                            'ml-2 h-5 w-5 group-hover:text-gray-500'
                           )}
                           aria-hidden="true"
                         />
@@ -174,15 +174,15 @@ export default function Header() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                          open ? 'text-gray-900' : 'text-gray-500',
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500'
                         )}
                       >
                         <span>Portfolio</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
-                            "ml-2 h-5 w-5 group-hover:text-gray-500"
+                            open ? 'text-gray-600' : 'text-gray-400',
+                            'ml-2 h-5 w-5 group-hover:text-gray-500'
                           )}
                           aria-hidden="true"
                         />
@@ -248,15 +248,15 @@ export default function Header() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                          open ? 'text-gray-900' : 'text-gray-500',
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500'
                         )}
                       >
                         <span>More</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
-                            "ml-2 h-5 w-5 group-hover:text-gray-500"
+                            open ? 'text-gray-600' : 'text-gray-400',
+                            'ml-2 h-5 w-5 group-hover:text-gray-500'
                           )}
                           aria-hidden="true"
                         />
@@ -303,7 +303,7 @@ export default function Header() {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/quote">
                   <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700">
-                    {f("header.free.quote.button.text")}
+                    {f('header.free.quote.button.text')}
                   </a>
                 </Link>
               </div>

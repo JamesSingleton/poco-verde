@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Head from "next/head";
-import Image from "next/image";
-import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
-import { getLayout } from "@/components/Layout/SiteLayout";
-import { Hero, Builders, Marketing } from "@/components/Home";
-import { COMPANY_NAME_LONG, DEFAULT_DESCRIPTION } from "@/lib/constants";
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
+import { InboxIcon, SparklesIcon } from '@heroicons/react/outline';
+import { getLayout } from '@/components/Layout/SiteLayout';
+import { Hero, Builders, Marketing } from '@/components/Home';
+import { COMPANY_NAME_LONG, DEFAULT_DESCRIPTION } from '@/lib/constants';
 
 const Index = () => (
   <>

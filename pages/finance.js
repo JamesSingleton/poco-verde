@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { COMPANY_NAME_LONG } from "@/lib/constants";
+import Head from 'next/head';
+import { COMPANY_NAME_LONG } from '@/lib/constants';
 
 const Finance = () => (
   <>

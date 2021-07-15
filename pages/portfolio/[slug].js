@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { getLayout } from "@/components/Layout/PortfolioLayout";
+import Image from 'next/image';
+import Link from 'next/link';
+import { getLayout } from '@/components/Layout/PortfolioLayout';
 
 const PortfolioItem = (props) => {
   return (
@@ -39,22 +39,22 @@ export async function getStaticProps(context) {
 export const getStaticPaths = ({ locales }) => {
   return {
     paths: [
-      { params: { slug: "turf" }, locale: "en" },
-      { params: { slug: "bbq" }, locale: "en" },
-      { params: { slug: "commercial-projects" }, locale: "en" },
-      { params: { slug: "concrete-pavers" }, locale: "en" },
-      { params: { slug: "courtyards" }, locale: "en" },
-      { params: { slug: "deco-wall" }, locale: "en" },
-      { params: { slug: "firepits" }, locale: "en" },
-      { params: { slug: "front-yard-desert" }, locale: "en" },
-      { params: { slug: "fireplaces" }, locale: "en" },
-      { params: { slug: "granite-colors" }, locale: "en" },
-      { params: { slug: "pools" }, locale: "en" },
-      { params: { slug: "ramada" }, locale: "en" },
-      { params: { slug: "recreational-areas" }, locale: "en" },
-      { params: { slug: "spas" }, locale: "en" },
-      { params: { slug: "travertine-pavers" }, locale: "en" },
-      { params: { slug: "water-features" }, locale: "en" },
+      { params: { slug: 'turf' }, locale: 'en' },
+      { params: { slug: 'bbq' }, locale: 'en' },
+      { params: { slug: 'commercial-projects' }, locale: 'en' },
+      { params: { slug: 'concrete-pavers' }, locale: 'en' },
+      { params: { slug: 'courtyards' }, locale: 'en' },
+      { params: { slug: 'deco-wall' }, locale: 'en' },
+      { params: { slug: 'firepits' }, locale: 'en' },
+      { params: { slug: 'front-yard-desert' }, locale: 'en' },
+      { params: { slug: 'fireplaces' }, locale: 'en' },
+      { params: { slug: 'granite-colors' }, locale: 'en' },
+      { params: { slug: 'pools' }, locale: 'en' },
+      { params: { slug: 'ramada' }, locale: 'en' },
+      { params: { slug: 'recreational-areas' }, locale: 'en' },
+      { params: { slug: 'spas' }, locale: 'en' },
+      { params: { slug: 'travertine-pavers' }, locale: 'en' },
+      { params: { slug: 'water-features' }, locale: 'en' },
     ],
     fallback: false,
   };

@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const navigation = {
   main: [
-    { name: "Contact Us", href: "/contact-us" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Accessibility", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Blog', href: '#' },
+    { name: 'Jobs', href: '#' },
+    { name: 'Press', href: '#' },
+    { name: 'Accessibility', href: '#' },
+    { name: 'Partners', href: '#' },
   ],
 };
 

@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { IntlProvider } from "react-intl";
-import Header from "./Header";
-import Footer from "./Footer";
-import * as locales from "../../locale";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { IntlProvider } from 'react-intl';
+import Header from './Header';
+import Footer from './Footer';
+import * as locales from '../../locale';
 
 const SiteLayout = ({ children }) => {
   const router = useRouter();

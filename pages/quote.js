@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
-import { PhoneIcon, MailIcon } from "@heroicons/react/outline";
-import { COMPANY_NAME_LONG } from "@/lib/constants";
+import Head from 'next/head';
+import Image from 'next/image';
+import { PhoneIcon, MailIcon } from '@heroicons/react/outline';
+import { COMPANY_NAME_LONG } from '@/lib/constants';
 
 const Quote = () => (
   <>
@@ -250,7 +250,7 @@ const Quote = () => (
                         aria-describedby="how-can-we-help-description"
                         rows={4}
                         className="block w-full shadow-sm sm:text-sm focus:ring-emerald-500 focus:border-emerald-500 border border-gray-300 rounded-md"
-                        defaultValue={""}
+                        defaultValue={''}
                       />
                     </div>
                   </div>

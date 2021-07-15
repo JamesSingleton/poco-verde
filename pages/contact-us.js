@@ -1,34 +1,34 @@
-import { Fragment } from "react";
-import Head from "next/head";
-import { useIntl } from "react-intl";
-import { MailIcon, MenuIcon, PhoneIcon, XIcon } from "@heroicons/react/outline";
-import { ExclamationCircleIcon } from "@heroicons/react/solid";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import classNames from "classnames";
-import * as Yup from "yup";
-import { COMPANY_NAME_LONG, CONTACT_US_DESCRIPTION } from "@/lib/constants";
+import { Fragment } from 'react';
+import Head from 'next/head';
+import { useIntl } from 'react-intl';
+import { MailIcon, MenuIcon, PhoneIcon, XIcon } from '@heroicons/react/outline';
+import { ExclamationCircleIcon } from '@heroicons/react/solid';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import classNames from 'classnames';
+import * as Yup from 'yup';
+import { COMPANY_NAME_LONG, CONTACT_US_DESCRIPTION } from '@/lib/constants';
 
 const offices = [
   {
     id: 1,
-    city: "Tempe",
-    address: ["520 W. Warner Rd", "Tempe, AZ 85284"],
+    city: 'Tempe',
+    address: ['520 W. Warner Rd', 'Tempe, AZ 85284'],
   },
 ];
 
 const ContactUsSchema = Yup.object().shape({
   firstName: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
   lastName: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
-  email: Yup.string().email("Invalid email").required("Required"),
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
   phone: Yup.string(),
-  subject: Yup.string().min(5).max(50).required("Required"),
-  message: Yup.string().min(5).max(500).required("Required"),
+  subject: Yup.string().min(5).max(50).required('Required'),
+  message: Yup.string().min(5).max(500).required('Required'),
 });
 
 const ContactUs = () => {
@@ -45,10 +45,10 @@ const ContactUs = () => {
         <div className="py-24 lg:py-32">
           <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
-              {f("contact.title.text")}
+              {f('contact.title.text')}
             </h1>
             <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
-              {f("contact.title.description.text")}
+              {f('contact.title.description.text')}
             </p>
           </div>
         </div>
@@ -206,10 +206,10 @@ const ContactUs = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-medium text-white">
-                  {f("contact.info.title.text")}
+                  {f('contact.info.title.text')}
                 </h3>
                 <p className="mt-6 text-base text-white max-w-3xl">
-                  {f("contact.info.description.text")}
+                  {f('contact.info.description.text')}
                 </p>
                 <dl className="mt-8 space-y-6">
                   <dt>
@@ -266,26 +266,26 @@ const ContactUs = () => {
                 </h3>
                 <Formik
                   initialValues={{
-                    firstName: "",
-                    lastName: "",
-                    email: "",
-                    phone: "",
-                    subject: "",
-                    message: "",
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    subject: '',
+                    message: '',
                   }}
                   validationSchema={ContactUsSchema}
                   onSubmit={(values) => {
-                    fetch("/api/contact", {
-                      method: "POST",
+                    fetch('/api/contact', {
+                      method: 'POST',
                       headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
                       },
                       body: JSON.stringify(values),
                     }).then((res) => {
-                      console.log("Response Received");
+                      console.log('Response Received');
                       if (res.status === 200) {
-                        console.log("Response Succeeded!");
+                        console.log('Response Succeeded!');
                       }
                     });
                   }}
@@ -303,9 +303,9 @@ const ContactUs = () => {
                           <Field
                             className={classNames(
                               errors.firstName
-                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
-                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
-                              "py-3 px-4 block w-full pr-10 rounded-md"
+                                ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+                                : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
+                              'py-3 px-4 block w-full pr-10 rounded-md'
                             )}
                             name="firstName"
                             id="firstName"
@@ -347,9 +347,9 @@ const ContactUs = () => {
                             autoComplete="family-name"
                             className={classNames(
                               errors.lastName
-                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
-                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
-                              "py-3 px-4 block w-full pr-10 rounded-md"
+                                ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+                                : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
+                              'py-3 px-4 block w-full pr-10 rounded-md'
                             )}
                             aria-invalid={errors.lastName}
                             aria-describedby="lastName-error"
@@ -388,9 +388,9 @@ const ContactUs = () => {
                             placeholder="you@example.com"
                             className={classNames(
                               errors.email
-                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
-                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
-                              "py-3 px-4 block w-full pr-10 rounded-md"
+                                ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+                                : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
+                              'py-3 px-4 block w-full pr-10 rounded-md'
                             )}
                             aria-invalid={errors.email}
                             aria-describedby="email-error"
@@ -437,9 +437,9 @@ const ContactUs = () => {
                             placeholder="(555) 987-6543"
                             className={classNames(
                               errors.phone
-                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
-                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
-                              "py-3 px-4 block w-full pr-10 rounded-md"
+                                ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+                                : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
+                              'py-3 px-4 block w-full pr-10 rounded-md'
                             )}
                             aria-describedby="phone-optional"
                           />
@@ -475,9 +475,9 @@ const ContactUs = () => {
                             id="subject"
                             className={classNames(
                               errors.subject
-                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
-                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
-                              "py-3 px-4 block w-full pr-10 rounded-md"
+                                ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+                                : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
+                              'py-3 px-4 block w-full pr-10 rounded-md'
                             )}
                           />
                           {errors.subject && touched.subject ? (
@@ -521,9 +521,9 @@ const ContactUs = () => {
                             rows={4}
                             className={classNames(
                               errors.message
-                                ? "border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
-                                : "text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300",
-                              "py-3 px-4 block w-full pr-10 rounded-md"
+                                ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+                                : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
+                              'py-3 px-4 block w-full pr-10 rounded-md'
                             )}
                             aria-describedby="message-max"
                           />

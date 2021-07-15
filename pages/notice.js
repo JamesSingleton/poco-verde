@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { useIntl } from "react-intl";
+import Head from 'next/head';
+import { useIntl } from 'react-intl';
 
 const Notice = () => {
   const { formatMessage } = useIntl();
@@ -14,7 +14,7 @@ const Notice = () => {
               20 Day Notice
             </h1>
             <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
-              {f("notice.description.text")}
+              {f('notice.description.text')}
             </p>
           </div>
         </div>
