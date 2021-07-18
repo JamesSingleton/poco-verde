@@ -3,11 +3,11 @@ import Link from 'next/link';
 const navigation = {
   main: [
     { name: 'Contact Us', href: '/contact-us' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'Builder Packages', href: '/packages/builder' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Free Quote', href: '/quote' },
+    { name: 'Finance', href: '/finance' },
+    { name: 'Warranty', href: '/warranty' },
   ],
 };
 
