@@ -305,7 +305,7 @@ const ContactUs = () => {
                               errors.firstName
                                 ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
                                 : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
-                              'py-3 px-4 block w-full pr-10 rounded-md'
+                              'sm:text-sm block w-full pr-10 rounded-md'
                             )}
                             name="firstName"
                             id="firstName"
@@ -349,7 +349,7 @@ const ContactUs = () => {
                               errors.lastName
                                 ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
                                 : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
-                              'py-3 px-4 block w-full pr-10 rounded-md'
+                              'sm:text-sm block w-full pr-10 rounded-md'
                             )}
                             aria-invalid={errors.lastName}
                             aria-describedby="lastName-error"
@@ -390,7 +390,7 @@ const ContactUs = () => {
                               errors.email
                                 ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
                                 : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
-                              'py-3 px-4 block w-full pr-10 rounded-md'
+                              'sm:text-sm block w-full pr-10 rounded-md'
                             )}
                             aria-invalid={errors.email}
                             aria-describedby="email-error"
@@ -439,7 +439,7 @@ const ContactUs = () => {
                               errors.phone
                                 ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
                                 : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
-                              'py-3 px-4 block w-full pr-10 rounded-md'
+                              'sm:text-sm block w-full pr-10 rounded-md'
                             )}
                             aria-describedby="phone-optional"
                           />
@@ -477,7 +477,7 @@ const ContactUs = () => {
                               errors.subject
                                 ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
                                 : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
-                              'py-3 px-4 block w-full pr-10 rounded-md'
+                              'sm:text-sm block w-full pr-10 rounded-md'
                             )}
                           />
                           {errors.subject && touched.subject ? (
@@ -523,7 +523,7 @@ const ContactUs = () => {
                               errors.message
                                 ? 'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
                                 : 'text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300',
-                              'py-3 px-4 block w-full pr-10 rounded-md'
+                              'sm:text-sm block w-full pr-10 rounded-md'
                             )}
                             aria-describedby="message-max"
                           />
