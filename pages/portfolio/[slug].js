@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
     props: {},
   };
 }
-export const getStaticPaths = ({ locales }) => {
+export const getStaticPaths = async ({ locales }) => {
   return {
     paths: [
       { params: { slug: 'turf' }, locale: 'en' },

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { PhoneIcon, MailIcon } from '@heroicons/react/outline';
 import { COMPANY_NAME_LONG } from '@/lib/constants';
-import FreeQuoteForm from '@/components/Quote/Form';
+import FreeQuoteForm from '@/components/Forms/FreeQuoteForm';
 
 const Quote = () => (
   <>
