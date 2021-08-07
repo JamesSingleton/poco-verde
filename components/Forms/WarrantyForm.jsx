@@ -1,8 +1,8 @@
 import { ExclamationCircleIcon } from '@heroicons/react/solid';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import classNames from 'classnames';
-import states from '@/data/states.json';
-import { WarrantySchema } from '@/lib/Schemas';
+import states from '@data/states.json';
+import { WarrantySchema } from '@lib/Schemas';
 
 const initialValues = {
   firstName: '',

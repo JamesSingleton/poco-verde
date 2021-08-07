@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { ExclamationCircleIcon } from '@heroicons/react/solid';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import classNames from 'classnames';
-import states from '@/data/states.json';
-import { FreeQuoteSchema } from '@/lib/Schemas';
+import states from '@data/states.json';
+import { FreeQuoteSchema } from '@lib/Schemas';
 
 const FreeQuoteForm = () => {
   return (

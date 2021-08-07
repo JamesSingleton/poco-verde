@@ -1,0 +1,22 @@
+{
+  "name": "Poco Verde Pools and Landscape",
+  "short_name": "Poco Verde Pools and Landscape",
+  "description": "Professional landscape and pool designers in Phoenix that can create your perfect landscape environment, Poco Verde Landscape has been in business for over 30 years, call for a quote at 480-893-3948!",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "background_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

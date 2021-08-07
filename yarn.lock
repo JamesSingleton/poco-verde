@@ -212,13 +212,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@headlessui/react@npm:1.3.0"
+"@headlessui/react@npm:latest":
+  version: 1.4.0
+  resolution: "@headlessui/react@npm:1.4.0"
   peerDependencies:
     react: ^16 || ^17 || ^18
     react-dom: ^16 || ^17 || ^18
-  checksum: 74076ab4d92cb3dc8b867978966b10ff397d332ff1ea7982aad90ced30dc7e14587756cb8a712fa207b445001ee2a0b3a32c4e90b7f0b6a0b531338919ebe291
+  checksum: c29e4ec4879de113a71478ab58f53817fd8cadd16bd57d1531a58e5787b4339600020c66cad9285fa84ae983af1406b9a1976ab7089980f7850b948e0e75de41
   languageName: node
   linkType: hard
 
@@ -436,6 +436,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^16.4.7":
+  version: 16.4.7
+  resolution: "@types/node@npm:16.4.7"
+  checksum: ab6fab8feedb42eeb1a1cbe2217083da4cdc3fed351bd7daf1ad44ad1e24ffa8ace944a2fc885721a2a0fa16d4ded3af282001bb55cf56930feb7abd9d15394c
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
@@ -458,6 +465,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: baa5a699b72ec9ce85e56755078b375ebefd9557b4d2b506c7f39e8aa50a769aa7f3d33684667ed67c436344b5c4c6272285fd3330b14296f0f25328972bc26a
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17.0.15":
+  version: 17.0.15
+  resolution: "@types/react@npm:17.0.15"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 427cca327d7a3c46af90e13ca3e1fe5e9c0dc1142df73c9b97c010ea420eb753776a58aec2e783fd669521dc87e89932bd17135fce2b2642aaa475216ac25914
   languageName: node
   linkType: hard
 
@@ -1237,6 +1255,13 @@ __metadata:
   version: 2.2.6
   resolution: "classnames@npm:2.2.6"
   checksum: 490eaeca5931846737ffd33e472a701d268d5b8bc5717dd4cf108a127b06e86e05350e06799abbbe763a0e4c945b4217f6700b7ae00ddc703505682c370e5cf2
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 57d536edede609f81425d24b062d8d720a466565faf1e38d32c881e883920baa71519ac70c7b565e9cd39201fb1c1ff9bdf8aabf8e26544bac481e7924867c83
   languageName: node
   linkType: hard
 
@@ -4137,12 +4162,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "poco-verde@workspace:."
   dependencies:
-    "@headlessui/react": ^1.3.0
+    "@headlessui/react": latest
     "@heroicons/react": ^1.0.3
     "@sendgrid/mail": ^7.4.5
     "@tailwindcss/aspect-ratio": ^0.2.1
     "@tailwindcss/forms": ^0.3.3
+    "@types/node": ^16.4.7
+    "@types/react": ^17.0.15
     autoprefixer: ^10.3.1
+    classnames: ^2.3.1
     eslint: 7.31.0
     eslint-config-next: 11.0.1
     eslint-config-prettier: ^8.3.0
@@ -4155,6 +4183,7 @@ __metadata:
     react-dom: 17.0.2
     react-intl: ^5.20.6
     tailwindcss: ^2.2.7
+    typescript: latest
     yup: ^0.32.9
   languageName: unknown
   linkType: soft
@@ -5500,6 +5529,26 @@ resolve@^2.0.0-next.3:
   version: 0.7.1
   resolution: "type-fest@npm:0.7.1"
   checksum: 13aa0b28ad4e3464eb62c33e7fe5165b41305abab68222507a6f728be9fc43da2aa61d25f5422296137f7751dbd4a71d6dbd7c7030dc1d897769ef09e8c1588c
+  languageName: node
+  linkType: hard
+
+typescript@latest:
+  version: 4.3.5
+  resolution: "typescript@npm:4.3.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: d9a8e78d72dd19896e6bfa73ab2a0fcea6eca2700d1d6e7c33f67a970af54a3e0fed8f715a8c4e6a0ff7fc0995067b394b2003518ab0aa84cd396377e54b760c
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@latest#builtin<compat/typescript>":
+  version: 4.3.5
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 7f0b8343f71ecac18095be1476b398aca420ab60dc207cc1efe078f381eef5527b80a518297720257114cdbda65612f8839e4b63e85dc95e67ac5cbbade8bdf0
   languageName: node
   linkType: hard
 

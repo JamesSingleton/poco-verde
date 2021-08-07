@@ -1,7 +1,7 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import classNames from 'classnames';
 import { ExclamationCircleIcon } from '@heroicons/react/solid';
-import { ContactUsSchema } from '@/lib/Schemas';
+import { ContactUsSchema } from '@lib/Schemas';
 
 const initialValues = {
   firstName: '',

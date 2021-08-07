@@ -1,0 +1,21 @@
+{
+  "title": "Phoenix Arizona Landscaping Contractor | Poco Verde Pools and Landscape",
+  "titleTemplate": "%s - Poco Verde Pools and Landscape",
+  "description": "Professional landscape and pool designers in Phoenix that can create your perfect landscape environment, Poco Verde Landscape has been in business for over 30 years, call for a quote at 480-893-3948!",
+  "openGraph": {
+    "title": "Phoenix Arizona Landscaping Contractor | Poco Verde Pools and Landscape",
+    "description": "Professional landscape and pool designers in Phoenix that can create your perfect landscape environment, Poco Verde Landscape has been in business for over 30 years, call for a quote at 480-893-3948!",
+    "type": "website",
+    "locale": "en",
+    "url": "https://poco-verde.vercel.app/",
+    "site_name": "Poco Verde Pools and Landscape",
+    "images": [
+      {
+        "url": "/images/twitter-card.png",
+        "width": 800,
+        "height": 600,
+        "alt": "Poco Verde Pools and Landscape"
+      }
+    ]
+  }
+}
