@@ -39,7 +39,7 @@ const Marketing = () => {
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <Image
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://res.cloudinary.com/dndhwi9i4/image/upload/v1625628476/Poco%20Verde/Portfolio/Pools/pool-18_ztzs20.jpg"
+                src="https://res.cloudinary.com/dndhwi9i4/image/upload/v1625628476/Poco%20Verde/Portfolio/Pools/pool-18_ztzs20.png"
                 alt="Inbox user interface"
                 width="1024"
                 height="768"
@@ -74,7 +74,7 @@ const Marketing = () => {
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <Image
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://res.cloudinary.com/dndhwi9i4/image/upload/v1625628475/Poco%20Verde/Portfolio/Commercial%20Projects/commercial-project-16_g7ticr.jpg"
+                src="https://res.cloudinary.com/dndhwi9i4/image/upload/v1625628475/Poco%20Verde/Portfolio/Commercial%20Projects/commercial-project-16_g7ticr.png"
                 alt="Customer profile user interface"
                 width="551.6"
                 height="502"
