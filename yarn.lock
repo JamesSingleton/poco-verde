@@ -424,14 +424,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:^0.3.3":
-  version: 0.3.3
-  resolution: "@tailwindcss/forms@npm:0.3.3"
+"@tailwindcss/forms@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@tailwindcss/forms@npm:0.5.0"
   dependencies:
     mini-svg-data-uri: ^1.2.3
   peerDependencies:
-    tailwindcss: ">=2.0.0"
-  checksum: 75637650c5a528ec577f26d6bd043bb9295c2fa443fe943b7391914b0ecd0570624be18bb69da8ca460743538d27b46a18d80936efb6806df991cce2face40d7
+    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
+  checksum: 31419e23312252d9d9dfd23bba9deb2427f33c0768cf2e78847f418fcfe545093afd9761e9e4d2ec32f2732bbcce27b38ee13c2c39ea0880f60d9a81d1f8c494
   languageName: node
   linkType: hard
 
@@ -4182,7 +4182,7 @@ __metadata:
     "@heroicons/react": ^1.0.3
     "@sendgrid/mail": ^7.4.5
     "@tailwindcss/aspect-ratio": ^0.2.1
-    "@tailwindcss/forms": ^0.3.3
+    "@tailwindcss/forms": ^0.5.0
     "@types/node": ^16.4.7
     "@types/react": ^17.0.15
     autoprefixer: ^10.3.1
