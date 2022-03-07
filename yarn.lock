@@ -282,12 +282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:11.1.0":
-  version: 11.1.0
-  resolution: "@next/eslint-plugin-next@npm:11.1.0"
+"@next/eslint-plugin-next@npm:11.1.4":
+  version: 11.1.4
+  resolution: "@next/eslint-plugin-next@npm:11.1.4"
   dependencies:
     glob: 7.1.7
-  checksum: 0c03381ff26c9851423c2aa4f07b4eca97d501fe002ea6f4c42e4f46fe5907c8b50be80f6cc492677e36bbf961d6ed27909372a8d09cccca11ac1641f765ab43
+  checksum: fc353077fee52018bdc8639192bb845c4575bf482e496586c290b87643b20ad08c2f8c3bb514efcb7f8ce676448973543cd1caa9ea56522b6cbdf8a211996d74
   languageName: node
   linkType: hard
 
@@ -1883,11 +1883,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:11.1.0":
-  version: 11.1.0
-  resolution: "eslint-config-next@npm:11.1.0"
+"eslint-config-next@npm:11.1.4":
+  version: 11.1.4
+  resolution: "eslint-config-next@npm:11.1.4"
   dependencies:
-    "@next/eslint-plugin-next": 11.1.0
+    "@next/eslint-plugin-next": 11.1.4
     "@rushstack/eslint-patch": ^1.0.6
     "@typescript-eslint/parser": ^4.20.0
     eslint-import-resolver-node: ^0.3.4
@@ -1903,7 +1903,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 9979daf4d0c0f6c6f44037a461a7aedd15091bb1db90ae2cb646ee31afaa4acaa2782e838212692b853fe0dc88b7d8c8bd68b0b311d0ddad64740f89245e0871
+  checksum: 2f4667237e3654e552fc301cb5c0dee407532de8a71929cb68810c8612fcbac621610344a6dc5fdf2c3b415899b1f3b774cf0cc680f4cbfb2e2a34976f468898
   languageName: node
   linkType: hard
 
@@ -4188,7 +4188,7 @@ __metadata:
     autoprefixer: ^10.3.1
     classnames: ^2.3.1
     eslint: 7.32.0
-    eslint-config-next: 11.1.0
+    eslint-config-next: 11.1.4
     eslint-config-prettier: ^8.3.0
     formik: ^2.2.9
     next: ^11.1.0
