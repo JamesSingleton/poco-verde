@@ -415,12 +415,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/aspect-ratio@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "@tailwindcss/aspect-ratio@npm:0.2.1"
+"@tailwindcss/aspect-ratio@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@tailwindcss/aspect-ratio@npm:0.4.0"
   peerDependencies:
-    tailwindcss: ">=2.0.0"
-  checksum: 90739254f6e77adf8bca2785103124891945b449d1ba4d222c11767bd6c532a3f3b9b441f875ceac28f90ba09f2697af66cc02fed4ed48125911953cc77b65a8
+    tailwindcss: ">=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1"
+  checksum: 6839ff67f02a90c44e70d4322c77a62c3529826982bc83e3bf235aebac9ff4ec2006e7ee95bfa8c1258a7b6a4718a4dd64efdb88eaa1abf3b7d8d06b1f0ac7fb
   languageName: node
   linkType: hard
 
@@ -4181,7 +4181,7 @@ __metadata:
     "@headlessui/react": latest
     "@heroicons/react": ^1.0.3
     "@sendgrid/mail": ^7.4.5
-    "@tailwindcss/aspect-ratio": ^0.2.1
+    "@tailwindcss/aspect-ratio": ^0.4.0
     "@tailwindcss/forms": ^0.3.3
     "@types/node": ^16.4.7
     "@types/react": ^17.0.15

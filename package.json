@@ -14,7 +14,7 @@
     "@headlessui/react": "latest",
     "@heroicons/react": "^1.0.3",
     "@sendgrid/mail": "^7.4.5",
-    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.3.3",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
